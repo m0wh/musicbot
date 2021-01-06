@@ -6,34 +6,34 @@ const chords = {
       name: 'Dm7',
       subtitutes: ['D7', 'Dø5', 'Do7', 'A♭7', 'D♭Maj (Fm#5)']
     },
-    // {
-    //   name: 'FMaj7',
-    //   subtitutes: ['Fm7', 'F#o7', 'F#ø7']
-    // }
+    {
+      name: 'FMaj7',
+      subtitutes: ['Fm7', 'F#o7', 'F#ø7']
+    }
   ],
   dom: [
     {
       name: 'G7',
       subtitutes: ['G9/♭9/13', 'D♭7', 'E7', 'B♭7', 'G7sus', 'G7sus♭9']
     },
-    // {
-    //   name: 'Bø7',
-    //   subtitutes: ['Bo7']
-    // }
+    {
+      name: 'Bø7',
+      subtitutes: ['Bo7']
+    }
   ],
   ton: [
-    // {
-    //   name: 'CMaj7',
-    //   subtitutes: ['CMaj9#11', 'C69', 'C69#11']
-    // },
-    // {
-    //   name: 'Cm7',
-    //   subtitutes: ['CmMaj7', 'Cm6', 'Cm69']
-    // },
-    // {
-    //   name: 'C7',
-    //   subtitutes: ['C13', 'C7#9', 'C7♭9']
-    // },
+    {
+      name: 'CMaj7',
+      subtitutes: ['CMaj9#11', 'C69', 'C69#11']
+    },
+    {
+      name: 'Cm7',
+      subtitutes: ['CmMaj7', 'Cm6', 'Cm69']
+    },
+    {
+      name: 'C7',
+      subtitutes: ['C13', 'C7#9', 'C7♭9']
+    },
     {
       name: 'Am7',
       subtitutes: ['Em7', 'FMaj7']
