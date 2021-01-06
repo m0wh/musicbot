@@ -25,19 +25,19 @@ const chords = {
     {
       name: 'CMaj7',
       subtitutes: ['CMaj9#11', 'C69', 'C69#11']
-    },
-    {
-      name: 'Cm7',
-      subtitutes: ['CmMaj7', 'Cm6', 'Cm69']
-    },
-    {
-      name: 'C7',
-      subtitutes: ['C13', 'C7#9', 'C7♭9']
-    },
-    {
-      name: 'Am7',
-      subtitutes: ['Em7', 'FMaj7']
-    }
+    } // ,
+    // {
+    //   name: 'Cm7',
+    //   subtitutes: ['CmMaj7', 'Cm6', 'Cm69']
+    // },
+    // {
+    //   name: 'C7',
+    //   subtitutes: ['C13', 'C7#9', 'C7♭9']
+    // },
+    // {
+    //   name: 'Am7',
+    //   subtitutes: ['Em7', 'FMaj7']
+    // }
   ]
 }
 
@@ -48,8 +48,7 @@ const tonRand = Math.random() * (chords.ton.length - 1)
 const prog = [
   chords.pre[Math.round(preRand)],
   chords.dom[Math.round(domRand)],
-  chords.ton[Math.round(tonRand)],
-  // chords.ton[Math.round(tonRand)]
+  chords.ton[Math.round(tonRand)]
 ].map(chord => [chord.name, ...chord.subtitutes][Math.round(Math.random() * chord.subtitutes.length)])
 // ].map(chord => chord.name)
 
@@ -58,7 +57,7 @@ prog.forEach(chord => {
   const ins = document.createElement('ins')
   ins.classList.add('scales_chords_api')
   ins.setAttribute('instrument', 'piano')
-  ins.setAttribute('chord', chord)
+  ins.setAttribute('chord', chord.replace(/♭/g, 'b'))
   ins.setAttribute('output', 'sound')
   document.querySelector('.notes').append(ins)
 })
@@ -67,6 +66,6 @@ prog.forEach(chord => {
   const ins = document.createElement('ins')
   ins.classList.add('scales_chords_api')
   ins.setAttribute('instrument', 'piano')
-  ins.setAttribute('chord', chord)
+  ins.setAttribute('chord', chord.replace(/♭/g, 'b'))
   document.querySelector('.notes').append(ins)
 })
